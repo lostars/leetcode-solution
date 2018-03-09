@@ -1,0 +1,1 @@
+#leetcode's most bad solution by java

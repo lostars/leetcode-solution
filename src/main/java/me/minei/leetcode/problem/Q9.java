@@ -15,6 +15,6 @@ public class Q9 {
         String origin = String.valueOf(x);
         StringBuilder sb = new StringBuilder(origin);
         sb.reverse();
-        return origin.endsWith(sb.toString());
+        return origin.equals(sb.toString());
     }
 }

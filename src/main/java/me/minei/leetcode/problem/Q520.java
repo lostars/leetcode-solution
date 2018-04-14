@@ -1,5 +1,8 @@
 package me.minei.leetcode.problem;
 
+/**
+ * https://leetcode.com/problems/detect-capital/description/
+ */
 public class Q520 {
     public static void main(String[] args) {
         System.out.println(detectCapitalUse("AAA"));

@@ -2,6 +2,8 @@ package me.minei.leetcode.problem;
 
 /**
  * https://leetcode.com/problems/sliding-window-maximum/description/
+ *
+ * 关键在于每次只是移动一格，所以不需要每次都计算最大值
  */
 public class Q239 {
 

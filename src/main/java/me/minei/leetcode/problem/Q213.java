@@ -32,8 +32,6 @@ public class Q213 {
         s[1][1] = nums[1];
         for (int i = 2; i < nums.length; i++) {
             s[0][i] = Math.max(s[0][i - 2] + (i == nums.length - 1 ? 0 : nums[i]), s[0][i - 1]);
-        }
-        for (int i = 2; i < nums.length; i++) {
             s[1][i] = Math.max(s[1][i - 2] + nums[i], s[1][i - 1]);
         }
 

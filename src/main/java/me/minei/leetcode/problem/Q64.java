@@ -24,10 +24,21 @@ public class Q64 {
                  * 其他数据获取最小和 dp[i][j] = min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j]
                  */
                 if (i == 0) dp[0][j] = j == 0 ? grid[0][j] : grid[0][j] + dp[0][j - 1];
-                else if(j == 0) dp[i][0] = grid[i][0] + dp[i - 1][0];
+                else if (j == 0) dp[i][0] = grid[i][0] + dp[i - 1][0];
                 else dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j];
             }
         }
         return dp[grid.length - 1][grid[0].length - 1];
+    }
+
+    public int minPathSumWithoutExtraMemory(int[][] grid) {
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                if (i == 0) grid[0][j] = j == 0 ? grid[0][j] : grid[0][j] + grid[0][j - 1];
+                else if (j == 0) grid[i][0] = grid[i][0] + grid[i - 1][0];
+                else grid[i][j] = Math.min(grid[i - 1][j], grid[i][j - 1]) + grid[i][j];
+            }
+        }
+        return grid[grid.length - 1][grid[0].length - 1];
     }
 }
